@@ -1,0 +1,13 @@
+{
+  "displayName": "CA001 - Block legacy authentication",
+  "state": "enabledForReportingButNotEnforced",
+  "conditions": {
+    "clientAppTypes": ["exchangeActiveSync", "other"],
+    "applications": { "includeApplications": ["All"] },
+    "users": {
+      "includeUsers": ["All"],
+      "excludeGroups": ["{{BREAK_GLASS_GROUP_ID}}"]
+    }
+  },
+  "grantControls": { "operator": "OR", "builtInControls": ["block"] }
+}

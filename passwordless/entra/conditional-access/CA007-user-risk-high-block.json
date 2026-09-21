@@ -1,0 +1,14 @@
+{
+  "displayName": "CA007 - High user risk is blocked pending admin remediation (P2)",
+  "state": "enabledForReportingButNotEnforced",
+  "conditions": {
+    "clientAppTypes": ["all"],
+    "applications": { "includeApplications": ["All"] },
+    "users": {
+      "includeUsers": ["All"],
+      "excludeGroups": ["{{BREAK_GLASS_GROUP_ID}}"]
+    },
+    "userRiskLevels": ["high"]
+  },
+  "grantControls": { "operator": "OR", "builtInControls": ["block"] }
+}

@@ -1,0 +1,14 @@
+{
+  "$comment": "Tenant-wide app management policy. Blocks adding new client secrets to app registrations created after the cut-over date, caps any remaining secret at 90 days and certificates at 365 days. Set-AppManagementPolicy.ps1 fills restrictForAppsCreatedAfterDateTime.",
+  "isEnabled": true,
+  "applicationRestrictions": {
+    "passwordCredentials": [
+      { "restrictionType": "passwordAddition", "state": "enabled", "restrictForAppsCreatedAfterDateTime": "{{CUTOVER_DATETIME}}" },
+      { "restrictionType": "passwordLifetime", "state": "enabled", "maxLifetime": "P90D", "restrictForAppsCreatedAfterDateTime": "{{CUTOVER_DATETIME}}" },
+      { "restrictionType": "symmetricKeyAddition", "state": "enabled", "restrictForAppsCreatedAfterDateTime": "{{CUTOVER_DATETIME}}" }
+    ],
+    "keyCredentials": [
+      { "restrictionType": "asymmetricKeyLifetime", "state": "enabled", "maxLifetime": "P365D", "restrictForAppsCreatedAfterDateTime": "{{CUTOVER_DATETIME}}" }
+    ]
+  }
+}
