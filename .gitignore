@@ -1,0 +1,9 @@
+# passwordless module
+/passwordless/entra/config.json
+/passwordless/**/node_modules
+/passwordless/**/out/
+/passwordless/**/*.csv
+*.pem
+*.pfx
+*.key
+*.cer

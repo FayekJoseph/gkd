@@ -1,0 +1,6 @@
+{
+  "@odata.type": "#microsoft.graph.emailAuthenticationMethodConfiguration",
+  "id": "Email",
+  "state": "disabled",
+  "allowExternalIdToUseEmailOtp": "disabled"
+}

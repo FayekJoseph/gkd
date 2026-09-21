@@ -1,0 +1,19 @@
+{
+  "@odata.type": "#microsoft.graph.deviceEnrollmentWindowsHelloForBusinessConfiguration",
+  "displayName": "Windows Hello for Business - tenant default",
+  "description": "Provision Windows Hello for Business at enrollment: TPM-backed key, 6+ char PIN with no expiry, biometrics allowed, FIDO2 security key sign-in enabled. This is the phishing-resistant credential for the Alienware laptop.",
+  "state": "enabled",
+  "securityDeviceRequired": true,
+  "pinMinimumLength": 6,
+  "pinMaximumLength": 127,
+  "pinUppercaseCharactersUsage": "allowed",
+  "pinLowercaseCharactersUsage": "allowed",
+  "pinSpecialCharactersUsage": "allowed",
+  "pinExpirationInDays": 0,
+  "pinPreviousBlockCount": 0,
+  "unlockWithBiometricsEnabled": true,
+  "enhancedBiometricsState": "enabled",
+  "remotePassportEnabled": false,
+  "securityKeyForSignIn": "enabled",
+  "enhancedSignInSecurity": 0
+}

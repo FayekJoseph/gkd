@@ -1,0 +1,19 @@
+{
+  "@odata.type": "#microsoft.graph.fido2AuthenticationMethodConfiguration",
+  "id": "Fido2",
+  "state": "enabled",
+  "isSelfServiceRegistrationAllowed": true,
+  "isAttestationEnforced": false,
+  "keyRestrictions": {
+    "isEnforced": false,
+    "enforcementType": "block",
+    "aaGuids": []
+  },
+  "includeTargets": [
+    {
+      "targetType": "group",
+      "id": "all_users",
+      "isRegistrationRequired": false
+    }
+  ]
+}

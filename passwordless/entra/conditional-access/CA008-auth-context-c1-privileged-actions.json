@@ -1,0 +1,20 @@
+{
+  "displayName": "CA008 - Auth context c1 (privileged actions) requires phishing-resistant MFA every time",
+  "state": "enabledForReportingButNotEnforced",
+  "conditions": {
+    "clientAppTypes": ["all"],
+    "applications": { "includeAuthenticationContextClassReferences": ["c1"] },
+    "users": {
+      "includeUsers": ["All"],
+      "excludeGroups": ["{{BREAK_GLASS_GROUP_ID}}"]
+    }
+  },
+  "grantControls": {
+    "operator": "OR",
+    "builtInControls": [],
+    "authenticationStrength": { "id": "00000000-0000-0000-0000-000000000004" }
+  },
+  "sessionControls": {
+    "signInFrequency": { "isEnabled": true, "frequencyInterval": "everyTime", "authenticationType": "primaryAndSecondaryAuthentication" }
+  }
+}

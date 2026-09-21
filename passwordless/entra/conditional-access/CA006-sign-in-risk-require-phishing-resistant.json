@@ -1,0 +1,21 @@
+{
+  "displayName": "CA006 - Medium/high sign-in risk requires phishing-resistant MFA (P2)",
+  "state": "enabledForReportingButNotEnforced",
+  "conditions": {
+    "clientAppTypes": ["all"],
+    "applications": { "includeApplications": ["All"] },
+    "users": {
+      "includeUsers": ["All"],
+      "excludeGroups": ["{{BREAK_GLASS_GROUP_ID}}"]
+    },
+    "signInRiskLevels": ["high", "medium"]
+  },
+  "grantControls": {
+    "operator": "OR",
+    "builtInControls": [],
+    "authenticationStrength": { "id": "00000000-0000-0000-0000-000000000004" }
+  },
+  "sessionControls": {
+    "signInFrequency": { "isEnabled": true, "frequencyInterval": "everyTime", "authenticationType": "primaryAndSecondaryAuthentication" }
+  }
+}

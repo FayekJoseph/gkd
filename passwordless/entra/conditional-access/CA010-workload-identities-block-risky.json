@@ -1,0 +1,14 @@
+{
+  "displayName": "CA010 - Risky workload identities are blocked (Workload ID Premium)",
+  "state": "enabledForReportingButNotEnforced",
+  "conditions": {
+    "clientAppTypes": ["all"],
+    "applications": { "includeApplications": ["All"] },
+    "clientApplications": {
+      "includeServicePrincipals": ["ServicePrincipalsInMyTenant"],
+      "excludeServicePrincipals": []
+    },
+    "servicePrincipalRiskLevels": ["high", "medium"]
+  },
+  "grantControls": { "operator": "OR", "builtInControls": ["block"] }
+}

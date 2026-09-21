@@ -1,0 +1,31 @@
+{
+  "@odata.type": "#microsoft.graph.androidWorkProfileCompliancePolicy",
+  "displayName": "Android (personal, work profile) - Zero Trust baseline",
+  "description": "Galaxy Z Fold 7 / Honor Pad 9 enrolled as personally-owned work profile. Requires Play Integrity (basic + device), no root, encryption, recent security patch, Company Portal integrity and a Defender for Endpoint risk score of Low or better. Devices without Google Mobile Services cannot pass Play Integrity and stay untrusted by design.",
+  "roleScopeTagIds": ["0"],
+  "passwordRequired": true,
+  "passwordRequiredType": "numericComplex",
+  "passwordMinimumLength": 6,
+  "passwordMinutesOfInactivityBeforeLock": 5,
+  "securityBlockJailbrokenDevices": true,
+  "osMinimumVersion": "14",
+  "minAndroidSecurityPatchLevel": "2025-06-01",
+  "storageRequireEncryption": true,
+  "securityRequireSafetyNetAttestationBasicIntegrity": true,
+  "securityRequireSafetyNetAttestationCertifiedDevice": true,
+  "securityRequireGooglePlayServices": true,
+  "securityRequireUpToDateSecurityProviders": true,
+  "securityRequireVerifyApps": true,
+  "securityRequireCompanyPortalAppIntegrity": true,
+  "deviceThreatProtectionEnabled": true,
+  "deviceThreatProtectionRequiredSecurityLevel": "low",
+  "advancedThreatProtectionRequiredSecurityLevel": "low",
+  "scheduledActionsForRule": [
+    {
+      "ruleName": "PasswordRequired",
+      "scheduledActionConfigurations": [
+        { "actionType": "block", "gracePeriodHours": 0, "notificationTemplateId": "", "notificationMessageCCList": [] }
+      ]
+    }
+  ]
+}
