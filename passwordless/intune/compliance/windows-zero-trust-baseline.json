@@ -1,0 +1,32 @@
+{
+  "@odata.type": "#microsoft.graph.windows10CompliancePolicy",
+  "displayName": "Windows - Zero Trust baseline",
+  "description": "Entra-joined Windows 11 must boot measured (TPM, Secure Boot, code integrity), be encrypted, run Defender with real-time protection and current signatures, keep the firewall on, and report a Defender for Endpoint machine risk score of Low or better. Non-compliant devices are blocked by CA004 immediately.",
+  "roleScopeTagIds": ["0"],
+  "passwordRequired": false,
+  "passwordRequiredToUnlockFromIdle": true,
+  "passwordMinutesOfInactivityBeforeLock": 15,
+  "osMinimumVersion": "10.0.22631.0",
+  "tpmRequired": true,
+  "secureBootEnabled": true,
+  "codeIntegrityEnabled": true,
+  "earlyLaunchAntiMalwareDriverEnabled": true,
+  "bitLockerEnabled": true,
+  "storageRequireEncryption": true,
+  "activeFirewallRequired": true,
+  "defenderEnabled": true,
+  "rtpEnabled": true,
+  "antivirusRequired": true,
+  "antiSpywareRequired": true,
+  "signatureOutOfDate": true,
+  "deviceThreatProtectionEnabled": true,
+  "deviceThreatProtectionRequiredSecurityLevel": "low",
+  "scheduledActionsForRule": [
+    {
+      "ruleName": "PasswordRequired",
+      "scheduledActionConfigurations": [
+        { "actionType": "block", "gracePeriodHours": 0, "notificationTemplateId": "", "notificationMessageCCList": [] }
+      ]
+    }
+  ]
+}

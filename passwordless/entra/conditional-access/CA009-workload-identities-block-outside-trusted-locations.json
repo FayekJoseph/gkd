@@ -1,0 +1,17 @@
+{
+  "displayName": "CA009 - Workload identities blocked outside trusted locations (Workload ID Premium)",
+  "state": "enabledForReportingButNotEnforced",
+  "conditions": {
+    "clientAppTypes": ["all"],
+    "applications": { "includeApplications": ["All"] },
+    "clientApplications": {
+      "includeServicePrincipals": ["ServicePrincipalsInMyTenant"],
+      "excludeServicePrincipals": []
+    },
+    "locations": {
+      "includeLocations": ["All"],
+      "excludeLocations": ["{{TRUSTED_NAMED_LOCATION_ID}}"]
+    }
+  },
+  "grantControls": { "operator": "OR", "builtInControls": ["block"] }
+}

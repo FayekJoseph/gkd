@@ -1,0 +1,6 @@
+{
+  "id": "c1",
+  "displayName": "Privileged actions",
+  "description": "Step-up context for admin portals, privileged API routes (zta-gateway /api/privileged), PIM activation and sensitive SharePoint sites. Requires phishing-resistant MFA every time (CA008).",
+  "isAvailable": true
+}

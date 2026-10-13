@@ -1,0 +1,25 @@
+{
+  "displayName": "CA011 - Linux and other unmanaged platforms: phishing-resistant MFA, 4h session, no persistence",
+  "state": "enabledForReportingButNotEnforced",
+  "conditions": {
+    "clientAppTypes": ["browser", "mobileAppsAndDesktopClients"],
+    "applications": { "includeApplications": ["All"] },
+    "users": {
+      "includeUsers": ["All"],
+      "excludeGroups": ["{{BREAK_GLASS_GROUP_ID}}"]
+    },
+    "platforms": {
+      "includePlatforms": ["all"],
+      "excludePlatforms": ["windows", "android", "iOS", "macOS"]
+    }
+  },
+  "grantControls": {
+    "operator": "OR",
+    "builtInControls": [],
+    "authenticationStrength": { "id": "00000000-0000-0000-0000-000000000004" }
+  },
+  "sessionControls": {
+    "signInFrequency": { "isEnabled": true, "value": 4, "type": "hours", "authenticationType": "primaryAndSecondaryAuthentication", "frequencyInterval": "timeBased" },
+    "persistentBrowser": { "isEnabled": true, "mode": "never" }
+  }
+}

@@ -24,3 +24,13 @@ local.properties
 /.kotlin
 
 /gradle/libs.versions.updates.toml
+
+# passwordless module: real tenant config, private keys and generated reports
+/passwordless/entra/config.json
+/passwordless/**/node_modules
+/passwordless/**/out/
+/passwordless/**/*.csv
+*.pem
+*.pfx
+*.key
+*.cer

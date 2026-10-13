@@ -1,0 +1,8 @@
+{
+  "$comment": "Workload identity federation: GitHub Actions on the main branch of this repo can obtain Entra tokens with no stored secret. Subject formats: repo:<owner>/<repo>:ref:refs/heads/<branch>, repo:<owner>/<repo>:environment:<name>, repo:<owner>/<repo>:pull_request.",
+  "name": "github-gkd-main",
+  "issuer": "https://token.actions.githubusercontent.com",
+  "subject": "repo:FayekJoseph/gkd:ref:refs/heads/main",
+  "audiences": ["api://AzureADTokenExchange"],
+  "description": "GitHub Actions OIDC for FayekJoseph/gkd main branch"
+}

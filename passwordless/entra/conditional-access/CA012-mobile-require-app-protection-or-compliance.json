@@ -1,0 +1,14 @@
+{
+  "displayName": "CA012 - Mobile Office apps: compliant device or app protection policy (MAM alternative to CA004 for personal phones)",
+  "state": "enabledForReportingButNotEnforced",
+  "conditions": {
+    "clientAppTypes": ["browser", "mobileAppsAndDesktopClients"],
+    "applications": { "includeApplications": ["Office365"] },
+    "users": {
+      "includeUsers": ["All"],
+      "excludeGroups": ["{{BREAK_GLASS_GROUP_ID}}"]
+    },
+    "platforms": { "includePlatforms": ["android", "iOS"] }
+  },
+  "grantControls": { "operator": "OR", "builtInControls": ["compliantDevice", "compliantApplication"] }
+}

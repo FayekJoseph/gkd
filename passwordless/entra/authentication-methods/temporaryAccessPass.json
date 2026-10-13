@@ -1,0 +1,17 @@
+{
+  "@odata.type": "#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration",
+  "id": "TemporaryAccessPass",
+  "state": "enabled",
+  "defaultLifetimeInMinutes": 60,
+  "defaultLength": 12,
+  "minimumLifetimeInMinutes": 10,
+  "maximumLifetimeInMinutes": 480,
+  "isUsableOnce": false,
+  "includeTargets": [
+    {
+      "targetType": "group",
+      "id": "all_users",
+      "isRegistrationRequired": false
+    }
+  ]
+}

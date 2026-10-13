@@ -1,0 +1,16 @@
+{
+  "$comment": "Copy to config.json (git-ignored) and fill in. Scripts substitute the double-brace tokens in the JSON policies with values from `placeholders`.",
+  "tenantId": "00000000-0000-0000-0000-000000000000",
+  "placeholders": {
+    "BREAK_GLASS_GROUP_ID": "",
+    "PILOT_GROUP_ID": "",
+    "TRUSTED_NAMED_LOCATION_ID": ""
+  },
+  "trustedIpRanges": [
+    "203.0.113.0/24"
+  ],
+  "breakGlass": {
+    "userPrefix": "bg",
+    "groupName": "CA-Exclude-BreakGlass"
+  }
+}
